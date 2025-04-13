@@ -1,6 +1,3 @@
-
-https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-ubuntu-20-04
-
 @@@@@@@@@@@@@@@@@@@@@@@@@Step1  pull the package 
 
 sudo apt install openjdk-8-jdk
@@ -10,14 +7,11 @@ export JAVA_HOME=/usr/lib/jvm/java-8-openjdk-amd64
 java -version
 
 $ cd /opt
+
 $ mkdir kafka
 $ cd kafka
-$ curl "https://downloads.apache.org/kafka/2.6.2/kafka_2.13-2.6.2.tgz"  -o kafka.tgz
-
+$ curl "https://archive.apache.org/dist/kafka/2.6.2/kafka_2.13-2.6.2.tgz"  -o kafka.tgz
 $ tar -xvzf kafka.tgz --strip 1
-
-
- 
 @@@@@@@@@@@@@@@@@@@@@@@@@Step 2  create the file conf 
 
 $ sudo nano /etc/systemd/system/zookeeper.service
@@ -77,3 +71,5 @@ You have started the kafka service. But if you rebooted your server, Kafka would
 
 sudo systemctl enable zookeeper
 sudo systemctl enable kafka
+
+ wget  https://apache.root.lu/nifi/1.23.2/nifi-1.23.2-bin.zip
